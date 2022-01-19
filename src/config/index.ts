@@ -3,9 +3,9 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 const {
-    TEST
+   PORT 
 } = process.env;
 
 export const config = {
-    testParam: TEST
+    port: PORT
 }
