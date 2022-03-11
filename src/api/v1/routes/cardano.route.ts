@@ -8,4 +8,10 @@ export class CardanoRoute {
             pkh: await CardanoService.addrToPubKeyHash(req.body.address)
         })
     }
+
+    public static async getStakeKeyHash(req: express.Request, res: express.Response) {
+        res.status(200).json({
+            pkh: await CardanoService.addrToStakeKeyHash(req.body.address)
+        })
+    }
 }

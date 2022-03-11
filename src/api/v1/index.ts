@@ -13,5 +13,7 @@ v1.post('/test',
     TestRoute.testPost)
 v1.post('/cardano/addr2pkh',
     CardanoRoute.getPublicKeyHash)
+v1.post('/cardano/addr2skh',
+    CardanoRoute.getStakeKeyHash)
 
 export default v1
