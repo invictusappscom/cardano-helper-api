@@ -11,7 +11,12 @@ export class CardanoRoute {
 
     public static async getStakeKeyHash(req: express.Request, res: express.Response) {
         res.status(200).json({
-            pkh: await CardanoService.addrToStakeKeyHash(req.body.address)
+            skh: await CardanoService.addrToStakeKeyHash(req.body.address)
         })
+    }
+
+    public static async getHash(req: express.Request, res: express.Response) {
+        
+        res.status(200).json(await CardanoService.addrToHash(req.body.address))
     }
 }
